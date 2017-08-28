@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">卡卡车管家</string>
+    <string name="exit">确定退出卡卡车管家吗？</string>
+    <string name="yuepay">使用卡卡车管家余额支付：</string>
+    <string name="main_title">卡卡车管家</string>
+    <string name="xieyi">《卡卡车管家用户服务协议》</string>
+
+    <string name="apptype">8</string>
+</resources>

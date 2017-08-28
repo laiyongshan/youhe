@@ -1,0 +1,22 @@
+# ninja log v5
+29	793	0	CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o	c55084c50f570437
+1	829	0	CMakeFiles/native-lib.dir/src/main/cpp/Md5.cpp.o	238c2387813c4096
+829	2030	0	../../../../build/intermediates/cmake/cherongbianfu/release/obj/mips64/libnative-lib.so	5ca75bac9dadebc
+45	2321	0	CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o	c55084c50f570437
+3	2335	0	CMakeFiles/native-lib.dir/src/main/cpp/Md5.cpp.o	238c2387813c4096
+2335	3834	0	../../../../build/intermediates/cmake/cherongbianfu/release/obj/mips64/libnative-lib.so	5ca75bac9dadebc
+16	532	0	CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o	c55084c50f570437
+1	619	0	CMakeFiles/native-lib.dir/src/main/cpp/Md5.cpp.o	238c2387813c4096
+619	1652	0	../../../../build/intermediates/cmake/cherongbianfu/release/obj/mips64/libnative-lib.so	5ca75bac9dadebc
+22	487	0	CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o	c55084c50f570437
+1	1227	0	CMakeFiles/native-lib.dir/src/main/cpp/Md5.cpp.o	238c2387813c4096
+1227	1991	0	../../../../build/intermediates/cmake/cherongbianfu/release/obj/mips64/libnative-lib.so	5ca75bac9dadebc
+3	311	0	CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o	c55084c50f570437
+1	379	0	CMakeFiles/native-lib.dir/src/main/cpp/Md5.cpp.o	238c2387813c4096
+379	873	0	../../../../build/intermediates/cmake/cherongbianfu/release/obj/mips64/libnative-lib.so	5ca75bac9dadebc
+25	1287	0	CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o	c55084c50f570437
+3	1289	0	CMakeFiles/native-lib.dir/src/main/cpp/Md5.cpp.o	238c2387813c4096
+1289	2533	0	../../../../build/intermediates/cmake/cherongbianfu/release/obj/mips64/libnative-lib.so	5ca75bac9dadebc
+13	438	0	CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o	c55084c50f570437
+1	479	0	CMakeFiles/native-lib.dir/src/main/cpp/Md5.cpp.o	238c2387813c4096
+479	985	0	../../../../build/intermediates/cmake/cherongbianfu/release/obj/mips64/libnative-lib.so	5ca75bac9dadebc

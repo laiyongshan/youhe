@@ -1,0 +1,16 @@
+# ninja log v5
+6	368	0	CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o	d633abd732ac5ece
+1	443	0	CMakeFiles/native-lib.dir/src/main/cpp/Md5.cpp.o	a84b8553ab9b63b7
+443	673	0	../../../../build/intermediates/cmake/kakafast/release/obj/armeabi/libnative-lib.so	c057f6c1e84dfa9f
+8	374	0	CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o	d633abd732ac5ece
+2	444	0	CMakeFiles/native-lib.dir/src/main/cpp/Md5.cpp.o	a84b8553ab9b63b7
+444	679	0	../../../../build/intermediates/cmake/kakafast/release/obj/armeabi/libnative-lib.so	c057f6c1e84dfa9f
+18	724	0	CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o	d633abd732ac5ece
+6	863	0	CMakeFiles/native-lib.dir/src/main/cpp/Md5.cpp.o	a84b8553ab9b63b7
+863	1477	0	../../../../build/intermediates/cmake/kakafast/release/obj/armeabi/libnative-lib.so	c057f6c1e84dfa9f
+9	460	0	CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o	d633abd732ac5ece
+2	561	0	CMakeFiles/native-lib.dir/src/main/cpp/Md5.cpp.o	a84b8553ab9b63b7
+561	1088	0	../../../../build/intermediates/cmake/kakafast/release/obj/armeabi/libnative-lib.so	c057f6c1e84dfa9f
+2	276	0	CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o	d633abd732ac5ece
+1	313	0	CMakeFiles/native-lib.dir/src/main/cpp/Md5.cpp.o	a84b8553ab9b63b7
+313	475	0	../../../../build/intermediates/cmake/kakafast/release/obj/armeabi/libnative-lib.so	c057f6c1e84dfa9f

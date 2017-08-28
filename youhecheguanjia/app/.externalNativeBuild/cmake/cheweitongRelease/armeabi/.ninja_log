@@ -1,0 +1,22 @@
+# ninja log v5
+7	412	0	CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o	d633abd732ac5ece
+1	484	0	CMakeFiles/native-lib.dir/src/main/cpp/Md5.cpp.o	a84b8553ab9b63b7
+484	722	0	../../../../build/intermediates/cmake/cheweitong/release/obj/armeabi/libnative-lib.so	c6f36c2e7912839d
+9	488	0	CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o	d633abd732ac5ece
+2	562	0	CMakeFiles/native-lib.dir/src/main/cpp/Md5.cpp.o	a84b8553ab9b63b7
+562	1058	0	../../../../build/intermediates/cmake/cheweitong/release/obj/armeabi/libnative-lib.so	c6f36c2e7912839d
+10	425	0	CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o	d633abd732ac5ece
+2	511	0	CMakeFiles/native-lib.dir/src/main/cpp/Md5.cpp.o	a84b8553ab9b63b7
+511	784	0	../../../../build/intermediates/cmake/cheweitong/release/obj/armeabi/libnative-lib.so	c6f36c2e7912839d
+6	399	0	CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o	d633abd732ac5ece
+1	475	0	CMakeFiles/native-lib.dir/src/main/cpp/Md5.cpp.o	a84b8553ab9b63b7
+475	918	0	../../../../build/intermediates/cmake/cheweitong/release/obj/armeabi/libnative-lib.so	c6f36c2e7912839d
+167	1500	0	CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o	d633abd732ac5ece
+2	2433	0	CMakeFiles/native-lib.dir/src/main/cpp/Md5.cpp.o	a84b8553ab9b63b7
+2433	3243	0	../../../../build/intermediates/cmake/cheweitong/release/obj/armeabi/libnative-lib.so	c6f36c2e7912839d
+7	405	0	CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o	d633abd732ac5ece
+2	469	0	CMakeFiles/native-lib.dir/src/main/cpp/Md5.cpp.o	a84b8553ab9b63b7
+469	701	0	../../../../build/intermediates/cmake/cheweitong/release/obj/armeabi/libnative-lib.so	c6f36c2e7912839d
+3	263	0	CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o	d633abd732ac5ece
+2	316	0	CMakeFiles/native-lib.dir/src/main/cpp/Md5.cpp.o	a84b8553ab9b63b7
+316	492	0	../../../../build/intermediates/cmake/cheweitong/release/obj/armeabi/libnative-lib.so	c6f36c2e7912839d

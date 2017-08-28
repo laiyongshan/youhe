@@ -1,0 +1,16 @@
+# ninja log v5
+7	377	0	CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o	3913c46c5e721d75
+1	442	0	CMakeFiles/native-lib.dir/src/main/cpp/Md5.cpp.o	a2207e66abda3ab
+442	725	0	../../../../build/intermediates/cmake/kakafast/release/obj/arm64-v8a/libnative-lib.so	7250d44c245e1df8
+5	294	0	CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o	3913c46c5e721d75
+1	354	0	CMakeFiles/native-lib.dir/src/main/cpp/Md5.cpp.o	a2207e66abda3ab
+354	662	0	../../../../build/intermediates/cmake/kakafast/release/obj/arm64-v8a/libnative-lib.so	7250d44c245e1df8
+22	2436	0	CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o	3913c46c5e721d75
+7	2750	0	CMakeFiles/native-lib.dir/src/main/cpp/Md5.cpp.o	a2207e66abda3ab
+2750	5647	0	../../../../build/intermediates/cmake/kakafast/release/obj/arm64-v8a/libnative-lib.so	7250d44c245e1df8
+10	493	0	CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o	3913c46c5e721d75
+3	576	0	CMakeFiles/native-lib.dir/src/main/cpp/Md5.cpp.o	a2207e66abda3ab
+576	2299	0	../../../../build/intermediates/cmake/kakafast/release/obj/arm64-v8a/libnative-lib.so	7250d44c245e1df8
+4	286	0	CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o	3913c46c5e721d75
+2	349	0	CMakeFiles/native-lib.dir/src/main/cpp/Md5.cpp.o	a2207e66abda3ab
+349	554	0	../../../../build/intermediates/cmake/kakafast/release/obj/arm64-v8a/libnative-lib.so	7250d44c245e1df8

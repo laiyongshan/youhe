@@ -1,0 +1,348 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion '25.0.2'
+
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+
+
+    //签名 by jian 2017-5-2
+    signingConfigs {
+
+        youhecheguanjia {
+            keyAlias 'yeohe.pig'
+            keyPassword 'yeohe123456'
+            storeFile file('../jks/yeohe.jks')
+            storePassword 'yeohe123456'
+        }
+
+        chebibei {
+            keyAlias 'chebibei'
+            keyPassword 'chebibei123456'
+            storeFile file('../jks/chebibei.jks')
+            storePassword 'chebibei123456'
+        }
+
+        weifuche {
+            keyAlias 'weifuche-pig'
+            keyPassword 'weifuche123'
+            storeFile file('../jks/weifuche.jks')
+            storePassword 'weifuche123'
+        }
+
+        shenghetong{
+            keyAlias 'shenghetong'
+            keyPassword 'shenghetong123456'
+            storeFile file('../jks/shenghetong.jks')
+            storePassword 'shenghetong123456'
+        }
+
+        kakacheguanjia {
+            keyAlias 'kakacheguanjia'
+            keyPassword 'kakacheguanjia123456'
+            storeFile file('../jks/kakacheguanjia.jks')
+            storePassword 'kakacheguanjia123456'
+        }
+
+    }
+
+    dexOptions {
+        incremental true
+        javaMaxHeapSize "4g"
+    }
+
+
+    packagingOptions {
+        exclude 'META-INF/NOTICE' // will not include NOTICE file
+        exclude 'META-INF/LICENSE' // will not include LICENSE file
+        // as noted by @Vishnuvathsan you may also need to include
+        // variations on the file name. It depends on your dependencies.
+        // Some other common variations on notice and license file names
+        exclude 'META-INF/notice'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license'
+        exclude 'META-INF/license.txt'
+
+    }
+
+
+    defaultConfig {
+
+        applicationId "com.example.youhe.youhecheguanjia"
+
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 53
+//        versionName "V2.0.2"
+        versionName "V2.4.3"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions{
+            annotationProcessorOptions {
+                arguments = [ moduleName : project.getName() ]
+            }
+        }
+
+        externalNativeBuild {
+            cmake {
+                cppFlags "-fexceptions"
+            }
+        }
+
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        debug {//by jian 2017-5-2
+            minifyEnabled false
+        }
+        release {
+            minifyEnabled true
+            //是否zip对齐
+            zipAlignEnabled true
+            // 缩减resource文件
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    task nativeLibsToJar(type: Zip, description: "create a jar archive of the native libs") {
+        destinationDir file("$projectDir/libs")
+        baseName "Native_Libs2"
+        extension "jar"
+        from fileTree(dir: "libs", include: "**/*.so")
+        into "lib"
+    }
+
+    tasks.withType(JavaCompile) {
+        compileTask -> compileTask.dependsOn(nativeLibsToJar)
+    }
+
+
+    packagingOptions {
+        exclude 'META-INF/maven/com.thoughtworks.xstream/xstream/pom.properties'
+        exclude 'META-INF/maven/com.thoughtworks.xstream/xstream/pom.xml'
+    }
+
+    sourceSets {
+        instrumentTest.setRoot('tests')
+        debug.setRoot('build-types/debug')
+        release.setRoot('build-types/release')
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+
+        maven { url "https://jitpack.io" }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+    }
+
+    repositories {
+        maven { url "https://jitpack.io" }
+    }
+    dependencies {
+        compile 'com.github.sd6352051:NiftyDialogEffects:1.0.0'
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+
+    externalNativeBuild{
+        cmake{
+            path "CMakeLists.txt"
+        }
+    }
+
+
+    //    多app打包 //jian 2017-5-2
+    productFlavors {
+//        友禾车管家
+        cheguanjia {
+            applicationId "com.example.youhe.youhecheguanjia"
+            signingConfig signingConfigs.youhecheguanjia
+            manifestPlaceholders = [XG_ACCESS_ID: "2100257624", XG_ACCESS_KEY:"A187LPM8WY5K",baidu_api_key:"eGIhG16hG38FUSfoGdiF1DrX6kGMi7RF"]//信鸽配置
+        }
+
+
+//        //车必备
+        chebibei {
+            applicationId "com.example.youhe.cheweitong"
+            signingConfig signingConfigs.chebibei
+            manifestPlaceholders = [XG_ACCESS_ID: "2100257627", XG_ACCESS_KEY:"ALC674S2NM5Z",baidu_api_key:"MFYca3F4sdcFnIHVoUO3G5PBWQAyZQ9D"]//信鸽配置
+
+        }
+
+        //微付车
+        weifuche {
+            applicationId "com.example.youhe.weifuche"
+            signingConfig signingConfigs.weifuche
+            manifestPlaceholders = [XG_ACCESS_ID: "2100257629", XG_ACCESS_KEY:"A994JQIFS23J",baidu_api_key:"4iV2GEdQ9dNiqWGFHoDT80zeUtu23GDw"]//信鸽配置
+        }
+
+
+        //盛合通
+        shenghetong{
+            applicationId "com.example.youhe.cheweitong"
+            signingConfig signingConfigs.shenghetong
+            manifestPlaceholders = [XG_ACCESS_ID: "2100257693", XG_ACCESS_KEY:"ARZ66SS1N19F",baidu_api_key:"9HCVNjAMLhwfUqFzLzplCv3UhsfqknW9"]//信鸽配置
+        }
+
+        //卡卡车管家
+        kakacheguanjia {
+            applicationId "com.example.youhe.cheweitong"
+            signingConfig signingConfigs.kakacheguanjia
+            manifestPlaceholders = [XG_ACCESS_ID: "2100257693", XG_ACCESS_KEY:"ARZ66SS1N19F",baidu_api_key:"s2WSHwfqi1xrAk8bTsxbjc8Kmqc2vs6C"]//信鸽配置
+        }
+
+
+    }
+    sourceSets { //jian 2017-5-2
+        main {//友禾车管家
+            manifest.srcFile 'src/main/AndroidManifest.xml'
+            java.srcDirs = ['src/main/java']
+            resources.srcDirs = ['src/main/java']
+            aidl.srcDirs = ['src/main/aidl']
+            renderscript.srcDirs = ['src/main/java']
+            res.srcDirs = ['src/main/res']
+            assets.srcDirs = ['src/main/assets']
+            jniLibs.srcDirs = ['libs','src/main/jniLibs']
+        }
+
+
+        cheguanjia.java.srcDirs = ['src/cheguanjia/java']
+        cheguanjia.res.srcDirs = ['src/cheguanjia/res']
+        cheguanjia.manifest.srcFile 'src/cheguanjia/AndroidManifest.xml'
+
+
+//        车行网
+        chexingwang.java.srcDirs = ['src/chexingwang/java']
+        chexingwang.res.srcDirs = ['src/chexingwang/res']
+//        车必备
+        chebibei.java.srcDirs = ['src/chebibei/java']
+        chebibei.res.srcDirs = ['src/chebibei/res']
+
+        //微付车
+        weifuche.java.srcDirs = ['src/weifuche/java']
+        weifuche.res.srcDirs = ['src/weifuche/res']
+        weifuche.manifest.srcFile 'src/weifuche/AndroidManifest.xml'
+
+        // 超级快车
+        chaojikuaiche.java.srcDirs = ['src/chaojikuaiche/java']
+        chaojikuaiche.res.srcDirs = ['src/chaojikuaiche/res']
+
+        //盛合通
+        shenghetong.java.srcDirs=['src/shenghetong/java']
+        shenghetong.res.srcDirs=['src/shenghetong/res']
+
+        //卡卡车管家
+        kakacheguanjia.java.srcDirs = ['src/kakacheguanjia/java']
+        kakacheguanjia.res.srcDirs = ['src/kakacheguanjia/res']
+
+    }
+
+    dataBinding{
+        enabled =true
+    }
+
+
+}
+//jian 2017-5-2
+def releaseTime() {
+    return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"))
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile files('libs/core.jar')
+    compile files('libs/pinyin4android1.0.jar')
+    compile files('libs/volley.jar')
+    compile files('libs/mobAPI-1.0.6.jar')
+    compile files('libs/MobCommons-2016.0727.1113.jar')
+    compile files('libs/MobTools-2016.0727.1113.jar')
+    compile('com.thoughtworks.xstream:xstream:1.4.7') {
+        exclude group: 'xmlpull'
+        exclude group: 'xpp3'
+    }
+    compile(name: 'libjoinpay-release', ext: 'aar')
+    compile files('libs/gson-2.6.2.jar')
+    compile files('libs/locSDK_6.12.jar')
+    compile files('libs/baidumapapi_base_v3_6_0.jar')
+    compile files('libs/baidumapapi_map_v3_6_0.jar')
+    compile files('libs/baidumapapi_cloud_v3_6_0.jar')
+    compile files('libs/baidumapapi_radar_v3_6_0.jar')
+    compile files('libs/baidumapapi_search_v3_6_0.jar')
+    compile files('libs/baidumapapi_util_v3_6_0.jar')
+    compile files('libs/P84SDK_20161107_0950.jar')
+    compile files('libs/P84SDK_20161102_1250_YH.jar')
+    testCompile 'junit:junit:4.12'
+    compile 'org.xutils:xutils:3.3.36'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'pub.devrel:easypermissions:0.1.7'
+    compile files('libs/jg_filter_sdk_1.1.jar')
+    compile files('libs/wup-1.0.0.E-SNAPSHOT.jar')
+    //    compile files('libs/Xg_sdk_v2.47_20161026_0936.jar')//jian 2017-5-2
+    compile files('libs/Xg_sdk_v3.1_20170417_0946.jar')
+    //jian 2017-5-2
+    compile files('libs/mid-core-sdk-3.7.2.jar')
+    //jian 2017-5-2
+    compile 'com.tencent.bugly:nativecrashreport:latest.release'
+    // 远程依赖集成方式（推荐）
+    compile 'com.tencent.bugly:crashreport_upgrade:latest.release'
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'com.android.support:support-v4:24.2.1'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.daimajia.androidanimations:library:1.0.3@aar'
+    compile 'com.google.android.gms:play-services-appindexing:8.4.0'
+    compile 'com.squareup.okhttp:okhttp:2.4.0'
+    compile 'com.squareup.okio:okio:1.5.0'
+    compile files('libs/js.jar')
+    compile 'com.android.support:recyclerview-v7:25.3.1'
+    compile 'com.android.support:design:25.3.1'
+    compile 'io.reactivex.rxjava2:rxjava:2.1.0'
+    compile 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.4@aar'
+    compile files('libs/tbs_sdk_thirdapp.jar')
+    compile files('libs/LinkPaySDK.jar')
+    weifucheCompile files('libs/LinkPaySDK.jar')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:multidex:1.0.1'
+    compile files('libs/iBridge.jar')
+    compile files('libs/qsAPI.jar')
+    compile files('libs/AndroidAPI.jar')
+    compile 'com.android.support:multidex:1.0.1'
+    compile files('libs/jhlblueconn.jar')
+
+    compile 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+
+    compile 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.1@aar'
+    compile 'com.alibaba:arouter-api:1.2.2'
+    annotationProcessor 'com.alibaba:arouter-compiler:1.1.3'
+
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+
+    compile 'com.zhihu.android:matisse:0.4.3'
+    compile 'it.sephiroth.android.library.imagezoom:library:1.0.4'
+
+}
+
+// 依赖插件脚本
+apply from: 'tinker-support.gradle'
+apply plugin: 'com.jakewharton.butterknife'

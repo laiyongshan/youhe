@@ -1,0 +1,10 @@
+# ninja log v5
+1	344	0	CMakeFiles/native-lib.dir/src/main/cpp/Md5.cpp.o	663b9446db8a1a89
+4	413	0	CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o	80b8dedac277e206
+414	665	0	../../../../build/intermediates/cmake/shenghetong/debug/obj/armeabi/libnative-lib.so	9f12931e6ccf5db8
+2	429	0	CMakeFiles/native-lib.dir/src/main/cpp/Md5.cpp.o	663b9446db8a1a89
+8	454	0	CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o	80b8dedac277e206
+455	1027	0	../../../../build/intermediates/cmake/shenghetong/debug/obj/armeabi/libnative-lib.so	9f12931e6ccf5db8
+2	338	0	CMakeFiles/native-lib.dir/src/main/cpp/Md5.cpp.o	663b9446db8a1a89
+6	479	0	CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o	80b8dedac277e206
+479	718	0	../../../../build/intermediates/cmake/shenghetong/debug/obj/armeabi/libnative-lib.so	9f12931e6ccf5db8

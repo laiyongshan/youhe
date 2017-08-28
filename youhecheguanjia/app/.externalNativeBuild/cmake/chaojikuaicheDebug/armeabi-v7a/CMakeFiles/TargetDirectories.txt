@@ -1,0 +1,3 @@
+F:/youhecheguanjia/app/.externalNativeBuild/cmake/chaojikuaicheDebug/armeabi-v7a/CMakeFiles/native-lib.dir
+F:/youhecheguanjia/app/.externalNativeBuild/cmake/chaojikuaicheDebug/armeabi-v7a/CMakeFiles/edit_cache.dir
+F:/youhecheguanjia/app/.externalNativeBuild/cmake/chaojikuaicheDebug/armeabi-v7a/CMakeFiles/rebuild_cache.dir

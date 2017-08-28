@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <include layout="@layout/jtitle_view"></include>
+
+    <FrameLayout
+        android:id="@+id/jtablet_view"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="签名区域"
+                android:textColor="#ededed"
+                android:textSize="48sp"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F5F5F5"
+        android:paddingTop="5dip">
+
+
+        <TextView
+            android:id="@+id/jwrite_pad_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dip"
+            android:layout_marginLeft="20dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="8dip"
+            android:layout_weight="1"
+            android:background="@drawable/joinpay_selector_btn_white"
+            android:gravity="center"
+            android:paddingBottom="10dip"
+            android:paddingTop="10dip"
+            android:text="重签"
+            android:textColor="#00A679"
+            android:textSize="18sp"></TextView>
+
+        <TextView
+            android:id="@+id/jwrite_pad_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="20dip"
+            android:layout_marginTop="8dip"
+            android:layout_weight="1"
+            android:background="@drawable/joinpay_selector_btn_green"
+            android:enabled="false"
+            android:gravity="center"
+            android:paddingBottom="10dip"
+            android:paddingTop="10dip"
+            android:text="确认"
+            android:textColor="#ffffff"
+            android:textSize="18sp"></TextView>
+    </LinearLayout>
+</LinearLayout>

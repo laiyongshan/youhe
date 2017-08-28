@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">车融蝙蝠</string>
+    <string name="exit">确定退出车融蝙蝠应用吗？</string>
+    <string name="xieyi">《车融蝙蝠用户服务协议》</string>
+    <string name="yuepay">使用车融蝙蝠余额支付：</string>
+    <string name="main_title">车融蝙蝠</string>
+
+    <string name="apptype">10</string>
+</resources>

@@ -1,0 +1,7 @@
+# ninja log v5
+2	1830	0	CMakeFiles/native-lib.dir/src/main/cpp/Md5.cpp.o	a55bb80e01dcbf62
+60	1836	0	CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o	2c081ed90843b1c4
+1837	3139	0	../../../../build/intermediates/cmake/cherongbianfu/debug/obj/mips64/libnative-lib.so	49edd52faeea391c
+2	375	0	CMakeFiles/native-lib.dir/src/main/cpp/Md5.cpp.o	a55bb80e01dcbf62
+17	385	0	CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o	2c081ed90843b1c4
+385	945	0	../../../../build/intermediates/cmake/cherongbianfu/debug/obj/mips64/libnative-lib.so	49edd52faeea391c
