@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="NiftyDialogEffects-1.0.0">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.android/build-cache/8b081ff1724329ea28d9ff4d4f2d495f05a2bfcf/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/8b081ff1724329ea28d9ff4d4f2d495f05a2bfcf/output/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.sd6352051/NiftyDialogEffects/1.0.0/edf54228cea80fa9d09c04ad7dc1c7b63d12ac78/NiftyDialogEffects-1.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

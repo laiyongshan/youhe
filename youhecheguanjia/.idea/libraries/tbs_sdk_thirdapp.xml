@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="tbs_sdk_thirdapp">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/libs/tbs_sdk_thirdapp.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

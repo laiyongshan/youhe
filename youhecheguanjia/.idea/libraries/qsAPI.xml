@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="qsAPI">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/libs/qsAPI.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="AndroidAPI">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/libs/AndroidAPI.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
